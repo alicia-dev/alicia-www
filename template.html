@@ -1,33 +1,38 @@
 <html>
   <head>
-    <title>$TITLE</title>
+    <title>Alicia Engine</title>
     <link href="https://fonts.googleapis.com/css?family=Orbitron:900|Oswald:500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   </head>
   <body>
-    <table width="620px" align="center">
+    <table width="620px" align="center" ng-app="" ng-init="page=0">
       <tr>
         <td>
-          <h1>Amberile</h1>
+          <h1>Alicia</h1>
         </td>
       </tr>
       <tr>
         <td id="navbar">
-          <a href="#">Home</a> |
-          <a href="#">FAQ</a> |
+          <a href="#" ng-click="page=0">Home</a> |
+          <a href="#" ng-click="page=1">FAQs</a> |
           <a href="#">Docs</a> |
           <a href="#">Download</a>
         </td>
       </tr>
       <tr>
-        <td>
+        <td id="meet">
           <h2>
-            Meet Amberile
+            Meet Alicia
           </h2>
-          <big>Amberile is an open-source, lightweight and multi-platform game framework.</big>
+          <big>Alicia is an open-source, lightweight and multi-platform game framework.</big>
           <br/><br/>
+        </td>
+      </tr>
+      <tr>
+        <td ng-show="page==0">
           <h3>FEATURES</h3>
-          <!--CONTENT-->
+          <!--CONTENT of feature-->
           <table width="100%">
             <tr>
               <td width="50%"><h4>&bull; Cross-platform</h4>
@@ -40,35 +45,48 @@
             </tr>
             <tr>
               <td><h4>&bull; Independence</h4>
-                <br/>Amberile doesn't rely much on 3rd-party libraries. But you still need the standard and OS-specified ones.
+                <br/>Alicia doesn't rely much on 3rd-party libraries. But you still need the standard and OS-specified ones.
               </td>
               <td><h4>&bull; Open-source</h4>
-                <br/>It's free as in freedom. You may sell the game you made. You can even sell Amberile itself.
+                <br/>It's free as in freedom. You may sell the game you made. You can even sell Alicia itself.
               </td>
             </tr>
             <tr>
               <td><h4>&bull; Easy & Simple</h4>
                 <br/>It's extreme easy to get started. You don't have to learn through a very huge document of functions.
               </td>
-              <td><h4>&bull; Data-driven</h4>
-                <br/>The data itself control the flow. Not the logic nor the objects.
+              <td><h4>&bull; Data-oriented</h4>
+                <br/>Forget about the objects that ruin performance. Let's make the games run fast.
               </td>
             </tr>
           </table>
-          <!--end content-->
+          <!--end content of feature-->
 
         </td>
-      </tr>
-      <tr>
-        <td>
-          <br/>
+        <td ng-show="page==1">
+          <h3>FAQs</h3>
+          <big>Please read through this FAQs before asking us any question. If you have a new question, feel free to contact us!</big>
+          <br/><br/>
+          <h4>What is Alicia?</h4>
+          It's an open-source framework for game creation. You use it to create a video game.
+          <h4>Can I eat it now?</h4>
+          Pretty not soon. This project is very incomplete. It's still in early development stage.
+          <h4>What platform does Alicia run on?</h4>
+          You can build your game on Windows and some UNIX-like systems. Alicia engine is planned to support running the games on Windows, Linux, Mac, Android, iOS, Tizen, FreeBSD, Haiku.
+          <h4>How much does it cost to use Alicia</h4>
+          Alicia is free as in freedom, and open-source. You can use it for both non-commerical and commerical project. No royalty needed.
+          <h4>When will I be able to use it?</h4>
+          Not soon. Please don't ask. This project is being worked on by a amateur 16-years-old with a 12-years-old-like's brain.
+          <h4>Can I help you with something in this project?</h4>
+          Of course! I'm glad you're interested. Please help me fix the damn documention. PRs are also welcomed!
         </td>
+
       </tr>
       <tr>
         <td id="footer">
           <a href="#">Forums</a> &bull; <a href="#">Roadmap</a> &bull; <a href="#">Sitemap</a> &bull; <a href="#">GitHub</a>
           <br/><br/>
-          &copy; 2017 Amberile Foundation
+          &copy; 2017 Alicia Foundation
         </td>
       </tr>
     </table>
